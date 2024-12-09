@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Mini Messageboard</h1>
+        <a class="btn" href="/new">Create a new message</a>
+      </header>
+      <main>
+        <% messages.forEach((message) => { %>
+        <div class="message">
+          <a href="/<%= message.user %>">Message from <%= message.user %></a>
+        </div>
+        <% }); %>
+      </main>
+    </div>
+  </body>
+</html>

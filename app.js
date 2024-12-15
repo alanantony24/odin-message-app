@@ -12,7 +12,7 @@ const indexRouter = require("./routes/indexRouter");
 
 app.use("/", indexRouter);
 
-const PORT = 8000;
+const PORT = 3000;
 app.listen(PORT, () => {
-  console.log(`odin-message: listening on ${PORT}`);
+  console.log(`Server running at http://localhost:${PORT}`);
 });
